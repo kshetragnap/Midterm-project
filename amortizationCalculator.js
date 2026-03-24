@@ -5,6 +5,9 @@ function amortization() {
          downpayment = downpayment/100;
          console.log(downpayment)
         const term = Number(prompt("Please enter the number of years: "));
+        if (term != 15 || 30) {
+            alert("You can only enter 15 or 30 for downpayment!")
+        }
         const months = term * 12
 
         dornmPayment = loanAmt
@@ -19,13 +22,13 @@ function amortization() {
         const interestPaid = (monthlyPayment * term) - principalLoan;
         const loanCost = principalLoan + annualInterestRate
 
-        const result = document.getElementById("Term").innerHTML= term;
-        const result1 = document.getElementById("Annual Interest Rate").innerHTML=  annualInterestRate;
-         const result2 = document.getElementById("Monthly Interest Rate").innerHTML= monthlyInterestRate;
-        const result3 = document.getElementById("Principal Loan Amount").innerHTML= principalLoan;
-        const result4 = document.getElementById("Total Interest Paid").innerHTML= interestPaid;
-        const result5 = document.getElementById("Total loan Cost").innerHTML= loanAmt;
-        const result6 = document.getElementById("Monthly Payment").innerHTML= monthlyPayment;
+        const result = document.getElementById("Term").innerHTML=  "term length = " + term;
+        const result1 = document.getElementById("Annual Interest Rate").innerHTML=  "Interest Rate = $" + annualInterestRate + "%";
+         const result2 = document.getElementById("Monthly Interest Rate").innerHTML= "Montly interest rate = $" + monthlyInterestRate;
+        const result3 = document.getElementById("Principal Loan Amount").innerHTML= "principal loan =   $" + principalLoan;
+        const result4 = document.getElementById("Total Interest Paid").innerHTML= "Interest Paid =  $" + interestPaid;
+        const result5 = document.getElementById("Total loan Cost").innerHTML= "Loan Amount =  $" + loanAmt;
+        const result6 = document.getElementById("Monthly Payment").innerHTML= "Monthly Payment =  $" + monthlyPayment;
 
     }
     catch(error){
